@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\LIB.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\LIB.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\LIB.csproj.CopyComplete
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.pdb

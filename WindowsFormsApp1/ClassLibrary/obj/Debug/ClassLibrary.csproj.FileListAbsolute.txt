@@ -1,0 +1,2 @@
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
