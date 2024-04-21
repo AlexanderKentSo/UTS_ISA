@@ -133,7 +133,7 @@ namespace lib
                 k.idPengirim = int.Parse(msdr.GetValue(3).ToString());
                 k.idPenerima = int.Parse(msdr.GetValue(4).ToString());
             }
-            else { throw new Exception("data kiriman tidk ditemukan"); }
+            else { throw new Exception("data kiriman tidak ditemukan"); }
             return k;
         }
         public void printKiriman()
@@ -149,6 +149,26 @@ namespace lib
             file.Close();
             Cetak p = new Cetak(new System.Drawing.Font("courier new", 12), nama);
             p.kirimPrinter();
+        }
+
+        public static void printKirimanStegano(Bitmap img)
+        {
+            Kiriman k = new Kiriman();
+            int kirimanId = img.GetPixel(0,0).B;
+            int pengirimId = img.GetPixel(img.Width - 1, img.Height - 1).R;
+            int penerimaId = img.GetPixel(img.Width - 1, img.Height - 1).G;
+            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect("SELECT * FROM `uts_isa`.`kiriman` WHERE `id`=" + kirimanId + " AND `pengirim`="+pengirimId+" AND `penerima`="+penerimaId+";");
+            if (msdr.Read() && img.GetPixel(img.Width - 1, 0).B==69 && img.GetPixel(0,img.Height-1).R==69)
+            {
+                k.Id = int.Parse(msdr.GetValue(0).ToString());
+                k.Barang = msdr.GetValue(1).ToString();
+                k.Status = msdr.GetValue(2).ToString();
+                k.idPengirim = int.Parse(msdr.GetValue(3).ToString());
+                k.idPenerima = int.Parse(msdr.GetValue(4).ToString());
+                if (msdr.GetValue(5).ToString() != "") { k.idKurir = int.Parse(msdr.GetValue(5).ToString()); }
+            }
+            else { throw new Exception("data kiriman tidak ditemukan atau gambar tidak mengandung steganografi"); }
+            k.printKiriman();
         }
         #endregion
     }

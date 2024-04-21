@@ -18,3 +18,5 @@ C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\D
 C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAmbilKiriman.resources
 C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormCekKiriman.resources
 C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSelesaikanKiriman.resources
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormStegano.resources
+C:\Users\user\Desktop\semester 4\UTS_ISA\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDekripsi.resources

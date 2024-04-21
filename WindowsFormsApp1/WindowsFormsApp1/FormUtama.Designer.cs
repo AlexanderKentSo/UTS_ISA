@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
             this.keluarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelUser = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
+            this.dekripsiSteganoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@ namespace WindowsFormsApp1
             // 
             this.kirimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cekBarangKirimanToolStripMenuItem,
-            this.kirimBarangToolStripMenuItem});
+            this.kirimBarangToolStripMenuItem,
+            this.dekripsiSteganoToolStripMenuItem});
             this.kirimToolStripMenuItem.Name = "kirimToolStripMenuItem";
             this.kirimToolStripMenuItem.Size = new System.Drawing.Size(68, 29);
             this.kirimToolStripMenuItem.Text = "Kirim";
@@ -76,7 +78,7 @@ namespace WindowsFormsApp1
             // 
             this.kirimBarangToolStripMenuItem.Name = "kirimBarangToolStripMenuItem";
             this.kirimBarangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.kirimBarangToolStripMenuItem.Text = "kirim barang";
+            this.kirimBarangToolStripMenuItem.Text = "Kirim Barang";
             this.kirimBarangToolStripMenuItem.Click += new System.EventHandler(this.kirimBarangToolStripMenuItem_Click);
             // 
             // antarToolStripMenuItem
@@ -127,6 +129,13 @@ namespace WindowsFormsApp1
             this.labelRole.TabIndex = 2;
             this.labelRole.Text = "Role:";
             // 
+            // dekripsiSteganoToolStripMenuItem
+            // 
+            this.dekripsiSteganoToolStripMenuItem.Name = "dekripsiSteganoToolStripMenuItem";
+            this.dekripsiSteganoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dekripsiSteganoToolStripMenuItem.Text = "Dekripsi Stegano";
+            this.dekripsiSteganoToolStripMenuItem.Click += new System.EventHandler(this.dekripsiSteganoToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -157,6 +166,7 @@ namespace WindowsFormsApp1
         public System.Windows.Forms.Label labelUser;
         public System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.ToolStripMenuItem selesaikanPengirimanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dekripsiSteganoToolStripMenuItem;
     }
 }
 

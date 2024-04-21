@@ -36,9 +36,24 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int kode = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-            Kiriman k = Kiriman.getKiriman(kode);
-            k.printKiriman();
+            try
+            {
+                int kode = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                Kiriman k = Kiriman.getKiriman(kode);
+                DialogResult steg = MessageBox.Show("Apakah anda ingin mencetak menggunakan steganografi ?", "Cetak Stegano", MessageBoxButtons.YesNo);
+                if(steg == DialogResult.Yes)
+                {
+                    FormStegano form = new FormStegano();
+                    form.k = k;
+                    form.Owner = this;
+                    form.ShowDialog();
+                }
+                else
+                {
+                    k.printKiriman();
+                }
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

@@ -63,6 +63,12 @@
     <Compile Include="FormCekKiriman.Designer.cs">
       <DependentUpon>FormCekKiriman.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDekripsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDekripsi.Designer.cs">
+      <DependentUpon>FormDekripsi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKirim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="FormSelesaikanKiriman.Designer.cs">
       <DependentUpon>FormSelesaikanKiriman.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStegano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStegano.Designer.cs">
+      <DependentUpon>FormStegano.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,9 @@
     <EmbeddedResource Include="FormCekKiriman.resx">
       <DependentUpon>FormCekKiriman.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDekripsi.resx">
+      <DependentUpon>FormDekripsi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKirim.resx">
       <DependentUpon>FormKirim.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSelesaikanKiriman.resx">
       <DependentUpon>FormSelesaikanKiriman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStegano.resx">
+      <DependentUpon>FormStegano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

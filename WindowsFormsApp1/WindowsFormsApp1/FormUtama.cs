@@ -63,5 +63,12 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void dekripsiSteganoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDekripsi form = new FormDekripsi();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }
