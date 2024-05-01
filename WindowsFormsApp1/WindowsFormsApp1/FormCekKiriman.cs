@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class FormCekKiriman : Form
     {
-        public User currentUser;
+        public byte[] message;
+        User currentUser;
         public FormCekKiriman()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace WindowsFormsApp1
 
         private void FormCekKiriman_Load(object sender, EventArgs e)
         {
+            string idUser = AES.DecryptStringFromBytes(message);
+            currentUser = User.getUser(int.Parse(idUser));
             dataGridView1.Rows.Clear();
             foreach(Kiriman k in Kiriman.daftarKirimanUser(currentUser.Id))
             {
@@ -44,7 +47,7 @@ namespace WindowsFormsApp1
                 if(steg == DialogResult.Yes)
                 {
                     FormStegano form = new FormStegano();
-                    form.k = k;
+                    form.message = AES.EncryptStringToBytes(k.Id.ToString());
                     form.Owner = this;
                     form.ShowDialog();
                 }

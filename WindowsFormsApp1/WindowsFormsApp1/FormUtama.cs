@@ -14,17 +14,11 @@ namespace WindowsFormsApp1
     public partial class FormUtama : Form
     {
 
-        public User currentUser = new User();
+        public byte[] message;
+        User currentUser;
         public FormUtama()
         {
             InitializeComponent();
-            this.Visible = false;
-            FormLogin form = new FormLogin();
-            form.Owner = this;
-            form.ShowDialog();
-            if (currentUser.Role == "pengguna") { antarToolStripMenuItem.Enabled = false; antarToolStripMenuItem.Visible = false; }
-            else if (currentUser.Role == "kurir") { kirimToolStripMenuItem.Enabled = false; kirimToolStripMenuItem.Visible = false; }
-            else { this.Close(); }
         }
 
         private void keluarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +29,7 @@ namespace WindowsFormsApp1
         private void kirimBarangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormKirim form = new FormKirim();
-            form.currentUser = currentUser;
+            form.message = message;
             form.Owner = this;
             form.ShowDialog();
         }
@@ -43,7 +37,7 @@ namespace WindowsFormsApp1
         private void ambilBarangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAmbilKiriman form = new FormAmbilKiriman();
-            form.currentUser = currentUser;
+            form.message = message;
             form.Owner = this;
             form.ShowDialog();
         }
@@ -51,7 +45,7 @@ namespace WindowsFormsApp1
         private void cekBarangKirimanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCekKiriman form = new FormCekKiriman();
-            form.currentUser = currentUser;
+            form.message = message;
             form.Owner = this;
             form.ShowDialog();
         }
@@ -59,7 +53,7 @@ namespace WindowsFormsApp1
         private void selesaikanPengirimanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSelesaikanKiriman form = new FormSelesaikanKiriman();
-            form.currentUser = currentUser;
+            form.message = message;
             form.Owner = this;
             form.ShowDialog();
         }
@@ -69,6 +63,19 @@ namespace WindowsFormsApp1
             FormDekripsi form = new FormDekripsi();
             form.Owner = this;
             form.ShowDialog();
+        }
+
+        private void FormUtama_Load(object sender, EventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            form.Owner = this;
+            form.ShowDialog();
+            this.Visible = false;
+            string idUser = AES.DecryptStringFromBytes(message);
+            currentUser = User.getUser(int.Parse(idUser));
+            if (currentUser.Role == "pengguna") { antarToolStripMenuItem.Enabled = false; antarToolStripMenuItem.Visible = false; }
+            else if (currentUser.Role == "kurir") { kirimToolStripMenuItem.Enabled = false; kirimToolStripMenuItem.Visible = false; }
+            else { this.Close(); }
         }
     }
 }

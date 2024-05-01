@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             {
                 User u = User.login(textBoxUsername.Text, textBoxPassword.Text);
                 FormUtama form = (FormUtama)this.Owner;
-                form.currentUser = u;
+                form.message = AES.EncryptStringToBytes(u.Id.ToString());
                 form.labelUser.Text = "User: " + u.Username;
                 form.labelRole.Text = "Role: " + u.Role;
                 this.Owner.Visible = true;

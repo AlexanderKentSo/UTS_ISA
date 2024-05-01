@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class FormSelesaikanKiriman : Form
     {
-        public User currentUser;
+        public byte[] message;
+        User currentUser;
         public FormSelesaikanKiriman()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace WindowsFormsApp1
 
         private void FormSelesaikanKiriman_Load(object sender, EventArgs e)
         {
+            string idUser = AES.DecryptStringFromBytes(message);
+            currentUser = User.getUser(int.Parse(idUser));
             dataGridView1.Rows.Clear();
             foreach(Kiriman k in Kiriman.daftarKirimanDiantar(currentUser.Id))
             {

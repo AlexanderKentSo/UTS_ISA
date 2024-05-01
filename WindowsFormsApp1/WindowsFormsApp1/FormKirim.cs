@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class FormKirim : Form
     {
-        public User currentUser;
+        public byte[] message;
+        User currentUser;
         public FormKirim()
         {
             InitializeComponent();
@@ -27,11 +28,13 @@ namespace WindowsFormsApp1
                 Kiriman.buatKiriman(textBoxBarang.Text, currentUser.Id, kirim.Id);
                 MessageBox.Show("kiriman sudah dibuat");
             }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void FormKirim_Load(object sender, EventArgs e)
         {
+            string idUser = AES.DecryptStringFromBytes(message);
+            currentUser = User.getUser(int.Parse(idUser));
             comboBox1.DataSource = currentUser.daftarUser();
             comboBox1.DisplayMember = "Username";
         }

@@ -33,13 +33,13 @@ namespace WindowsFormsApp1
             this.kirimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cekBarangKirimanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kirimBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dekripsiSteganoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.antarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ambilBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selesaikanPengirimanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keluarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelUser = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
-            this.dekripsiSteganoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,16 +70,23 @@ namespace WindowsFormsApp1
             // cekBarangKirimanToolStripMenuItem
             // 
             this.cekBarangKirimanToolStripMenuItem.Name = "cekBarangKirimanToolStripMenuItem";
-            this.cekBarangKirimanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cekBarangKirimanToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.cekBarangKirimanToolStripMenuItem.Text = "Cek Barang Kiriman";
             this.cekBarangKirimanToolStripMenuItem.Click += new System.EventHandler(this.cekBarangKirimanToolStripMenuItem_Click);
             // 
             // kirimBarangToolStripMenuItem
             // 
             this.kirimBarangToolStripMenuItem.Name = "kirimBarangToolStripMenuItem";
-            this.kirimBarangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.kirimBarangToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.kirimBarangToolStripMenuItem.Text = "Kirim Barang";
             this.kirimBarangToolStripMenuItem.Click += new System.EventHandler(this.kirimBarangToolStripMenuItem_Click);
+            // 
+            // dekripsiSteganoToolStripMenuItem
+            // 
+            this.dekripsiSteganoToolStripMenuItem.Name = "dekripsiSteganoToolStripMenuItem";
+            this.dekripsiSteganoToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
+            this.dekripsiSteganoToolStripMenuItem.Text = "Dekripsi Stegano";
+            this.dekripsiSteganoToolStripMenuItem.Click += new System.EventHandler(this.dekripsiSteganoToolStripMenuItem_Click);
             // 
             // antarToolStripMenuItem
             // 
@@ -129,13 +136,6 @@ namespace WindowsFormsApp1
             this.labelRole.TabIndex = 2;
             this.labelRole.Text = "Role:";
             // 
-            // dekripsiSteganoToolStripMenuItem
-            // 
-            this.dekripsiSteganoToolStripMenuItem.Name = "dekripsiSteganoToolStripMenuItem";
-            this.dekripsiSteganoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dekripsiSteganoToolStripMenuItem.Text = "Dekripsi Stegano";
-            this.dekripsiSteganoToolStripMenuItem.Click += new System.EventHandler(this.dekripsiSteganoToolStripMenuItem_Click);
-            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -147,6 +147,7 @@ namespace WindowsFormsApp1
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormUtama";
             this.Text = "FormUtama";
+            this.Load += new System.EventHandler(this.FormUtama_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

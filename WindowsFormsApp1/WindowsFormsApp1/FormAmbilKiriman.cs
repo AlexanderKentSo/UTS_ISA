@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class FormAmbilKiriman : Form
     {
-        public User currentUser;
+        public byte[] message;
+        User currentUser;
         public FormAmbilKiriman()
         {
             InitializeComponent();
@@ -29,10 +30,12 @@ namespace WindowsFormsApp1
 
         private void FormAmbilKiriman_Load(object sender, EventArgs e)
         {
+            string idUser = AES.DecryptStringFromBytes(message);
+            currentUser = User.getUser(int.Parse(idUser));
             dataGridView1.Rows.Clear();
-            foreach(Kiriman k in Kiriman.daftarKirimanMenunggu())
+            foreach (Kiriman k in Kiriman.daftarKirimanMenunggu())
             {
-                dataGridView1.Rows.Add(k.Id,k.Barang,User.getUser(k.IdPengirim).Alamat, User.getUser(k.IdPenerima).Alamat);
+                dataGridView1.Rows.Add(k.Id, k.Barang, User.getUser(k.IdPengirim).Alamat, User.getUser(k.IdPenerima).Alamat);
             }
             DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
             bcol.Name = "Ambil";

@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class FormStegano : Form
     {
-        public Kiriman k;
+        public byte[] message;
+        Kiriman k;
         public FormStegano()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace WindowsFormsApp1
 
         private void FormStegano_Load(object sender, EventArgs e)
         {
+            string kirimanId = AES.DecryptStringFromBytes(message);
+            k = Kiriman.getKiriman(int.Parse(kirimanId));
             pictureBoxImg.SizeMode = PictureBoxSizeMode.Zoom;
             labelKiriman.Text = "Kiriman: " + k.Barang;
             labelImg.Text = "";

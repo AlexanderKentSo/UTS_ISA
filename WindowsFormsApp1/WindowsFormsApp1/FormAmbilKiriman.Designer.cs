@@ -30,11 +30,11 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaBarang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamatAmbil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamatKirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,19 +50,9 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(1225, 316);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(310, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ambil Kiriman";
             // 
             // id
             // 
@@ -92,11 +82,21 @@ namespace WindowsFormsApp1
             this.alamatKirim.Name = "alamatKirim";
             this.alamatKirim.Width = 150;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(580, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ambil Kiriman";
+            // 
             // FormAmbilKiriman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 400);
+            this.ClientSize = new System.Drawing.Size(1271, 400);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormAmbilKiriman";
