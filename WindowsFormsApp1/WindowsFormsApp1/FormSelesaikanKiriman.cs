@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
                 dataGridView1.Rows.Add(k.Id,k.Barang,User.getUser(k.IdPengirim).Alamat,User.getUser(k.IdPenerima).Alamat);
             }
             DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-            bcol.Name = "Selesaika";
+            bcol.Name = "Selesaikan";
             bcol.HeaderText = "Selesaikan";
             bcol.Text = "Selesaikan";
             bcol.UseColumnTextForButtonValue = true;
